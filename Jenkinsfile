@@ -16,7 +16,8 @@ pipeline {
         }
        
         stage('2nd testing ') {
-            steps {
+            steps { 
+                script {
              sh ' echo " <html>
 <head>
 <title>Page Title</title>
@@ -28,6 +29,7 @@ pipeline {
   <input type="text" id="lname" name="lname">
 </form> </body>
 </html> " >> /var/www/html/release.html '
+                }
              
             }
         }
