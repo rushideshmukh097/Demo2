@@ -17,7 +17,7 @@ pipeline {
        
         stage('2nd testing ') {
             steps {
-             sh ' echo "this is Release branch change" >> /var/www/html/release.html '
+             sh ' echo "This is Release branch change" >> /var/www/html/release.html '
             }
         }
 
