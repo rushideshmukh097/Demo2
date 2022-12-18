@@ -17,13 +17,13 @@ pipeline {
        
         stage('2nd testing ') {
             steps {
-             sh ' echo "this is master branch change" >> /var/www/html/master.html '
+             sh ' echo "this is Release branch change" >> /var/www/html/release.html '
             }
         }
 
         stage('staging ') {
             steps {
-                sh 'chmod -R 777 /var/www/html/master.html'
+                sh 'chmod -R 777 /var/www/html/release.html'
             }
         }
 
