@@ -18,7 +18,7 @@ pipeline {
         stage('2nd testing ') {
             steps { 
                
-             sh ' echo " This is Release branch  " >> /var/www/html/release.html '
+             sh ' echo " This is Release branch by rushi  " >> /var/www/html/release.html '
                 
              
             }
