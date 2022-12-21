@@ -21,7 +21,7 @@ pipeline {
        
         stage('redirect ') {
             steps {
-             sh ' echo "This is job is build and deploy by slave-1 " >> /var/www/html/master.html '
+             sh ' echo "This  job is build and deploy by slave-1 " > /var/www/html/master.html '
             }
         }
 
