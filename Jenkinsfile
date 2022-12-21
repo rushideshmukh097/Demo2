@@ -1,7 +1,7 @@
 pipeline {
     agent {
         label{
-            label 'SL1'
+            label 'SL2'
         }
     }
 
@@ -21,7 +21,7 @@ pipeline {
        
         stage('redirect ') {
             steps {
-             sh ' echo "This  job is build and deploy by slave-1 " > /var/www/html/master.html '
+             sh ' echo "This job is build and deploy by slave-2 " > /var/www/html/master.html '
             }
         }
 
