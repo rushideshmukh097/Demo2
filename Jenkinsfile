@@ -17,7 +17,7 @@ pipeline {
        
         stage('2nd testing ') {
             steps {
-             sh ' echo "this is qa branch change" >> /var/www/html/qa.html '
+             sh ' echo "This is qa branch change an Build id trigger by WebHook" >> /var/www/html/qa.html '
             }
         }
 
