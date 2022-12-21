@@ -21,13 +21,13 @@ pipeline {
        
         stage('redirect ') {
             steps {
-             sh ' echo "This is dev branch code change-1 & build is trigger by WebHook & job is build and deploy by slave-2 " > /var/www/html/master.html '
+             sh ' echo "This is dev branch code change-1 & build is trigger by WebHook & job is build and deploy by slave-2 " > /var/www/html/dev.html '
             }
         }
 
         stage('permission ') {
             steps {
-                sh 'sudo chmod -R 777 /var/www/html/master.html'
+                sh 'sudo chmod -R 777 /var/www/html/dev.html'
             }
         }
 
