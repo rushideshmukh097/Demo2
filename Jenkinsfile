@@ -1,38 +1,41 @@
 pipeline {
-    agent any
+    agent {
+        label{
+            label 'SL2'
+        }
+    }
 
     stages {
 
         stage('build stage') {
             steps {
-                sh 'yum install httpd -y'
+                sh 'sudo yum install httpd -y'
                  }
         }
 
-        stage('1st testing') {
+        stage('starting httpd') {
             steps {
-                sh 'service httpd start'
+                sh 'sudo service httpd start'
             }
         }
        
-        stage('2nd testing ') {
+        stage('redirect ') {
             steps {
-             sh ' echo "This is dev branch change & Build is Trigger by using WebHook" >> /var/www/html/dev.html '
+             sh ' echo "This is dev branch code change-1 & build is trigger by WebHook & job is build and deploy by slave-2 " > /var/www/html/master.html '
             }
         }
 
-        stage('staging ') {
+        stage('permission ') {
             steps {
-                sh 'chmod -R 777 /var/www/html/dev.html'
+                sh 'sudo chmod -R 777 /var/www/html/master.html'
             }
         }
 
-        stage('deploy') {
+        stage('restart') {
             steps {
-                sh 'chkconfig httpd on'
+                sh 'sudo chkconfig httpd on'
             }
         }
 
-      }      
-       
-   }
+      } 
+}
