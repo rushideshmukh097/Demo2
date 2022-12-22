@@ -18,7 +18,7 @@ pipeline {
         stage('2nd testing ') {
             steps { 
                
-             sh ' echo " This is Release branch by first commit change code  " > /var/www/html/release.html '
+             sh ' echo " This is Release branch by second commit change code  " > /var/www/html/release.html '
                 
              
             }
